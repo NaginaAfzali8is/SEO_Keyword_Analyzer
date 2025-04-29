@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SEO Keyword Analyzer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 40px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #0a66c2;
+        }
+
+        .description {
+            background-color: #eef6ff;
+            border-left: 6px solid #0a66c2;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #0a66c2;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #084b9c;
+        }
+
+        .footer {
+            font-size: 14px;
+            margin-top: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 SEO Keyword Analyzer</h1>
+
+    <div class="description">
+        This tool helps you analyze the **keywords and SEO content** used on multiple pages of any website (e.g., ClickUp, Trello, etc.).<br><br>
+        It fetches each provided page, extracts SEO-relevant data like:
+        <ul>
+            <li>Page Title</li>
+            <li>Meta Description</li>
+            <li>Meta Keywords</li>
+            <li>Headings (H1–H6)</li>
+            <li>Body Text</li>
+        </ul>
+        Then it identifies and ranks the keywords used on each page and highlights common ones across all pages.<br>
+        You'll receive a downloadable Excel report with full keyword frequency data.
+    </div>
+
+    <form action="/analyze" method="post">
+        <label for="urls"><strong>Enter the URLs to analyze (comma separated):</strong></label><br><br>
+        <textarea name="urls" id="urls" rows="8" placeholder="https://clickup.com/, https://clickup.com/features, https://clickup.com/blog"></textarea><br>
+        <button type="submit">Analyze & Download SEO Report</button>
+    </form>
+
+    <div class="footer">
+        💡 Tip: This tool is ideal for competitor SEO research, keyword strategy audits, and content planning.
+    </div>
+</body>
+</html>
